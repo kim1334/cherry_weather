@@ -1,7 +1,8 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { LoginAtom } from "../recoil/LoginAtom";
+//import { lazy } from "react";
 //일반적인 임포트
 import Login from "../pages/Login"; 
 import Main from "../pages/Main";   
@@ -38,7 +39,7 @@ const Router = () => {
     <Suspense fallback={<div>로딩중..잠만기달...</div>}> 
     {/* Suspense는 레이즈 라우터 사용시 컴포넌트가 로드되는 동안 표시하는 화면을 출력할 수 있다*/} 
       <Routes>
-        
+
         {/* 로그인 여부와 상관없이 접근할 수 있는 페이지  */}
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
