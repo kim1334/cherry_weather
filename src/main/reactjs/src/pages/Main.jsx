@@ -4,6 +4,7 @@ import Layout from "../common/Layout";
 
 const Main = () => {
   return (
+     // 레이아웃을 사용하는 방법은 아래와 같이 해당 컴포넌트의 리턴값을 감싼다
     <Layout>
       <h1>메인 페이지 화면</h1>
       <img alt="" src={icon} />
