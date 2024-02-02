@@ -1,6 +1,6 @@
 import React, { Suspense} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { LoginAtom } from "../recoil/LoginAtom";
 //import { lazy } from "react";
 //일반적인 임포트
@@ -31,7 +31,7 @@ import Group from "../pages/Group";
 
 const Router = () => {
 
-    const [isLogin, setIsLogin] = useRecoilState(LoginAtom); // 로그인 여부를 저장하는 상태
+    const isLogin = useRecoilValue(LoginAtom); // 로그인 여부를 저장하는 상태
 
   return (
 
